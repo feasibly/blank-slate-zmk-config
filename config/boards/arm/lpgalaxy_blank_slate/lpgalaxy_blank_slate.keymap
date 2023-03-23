@@ -10,9 +10,10 @@
 #include <dt-bindings/zmk/outputs.h>
 
 #define QWERTY_BASE 1
+#define HYP(x) LS(LC(LA(LG(x))))
 
-#define TBLE_ORTHO   1
-// #define TBLE_MIT     1
+// #define TBLE_ORTHO   1
+ #define TBLE_MIT     1
 // #define TBLE_DUAL_2U 1
 
 #define NAV_L 1
@@ -70,9 +71,9 @@
             label = "Base";
             bindings = <
 #ifdef QWERTY_BASE
- &kp ESC    &kp Q      &kp W      &kp E       &kp R          &kp T          &kp Y            &kp U          &kp I       &kp O      &kp P         &kp BKSP
- &kp TAB    &kp A      &kp S      &kp D       &kp F          &kp G          &kp H            &kp J          &kp K       &kp L      &kp SEMI      &kp QUOT
- &kp LSHFT  &kp Z      &kp X      &kp C       &kp V          &kp B          &kp N            &kp M          &kp COMMA   &kp DOT    &kp FSLH      &kp RET
+ &kp TAB        &kp Q      &kp W      &kp E       &kp R          &kp T          &kp Y            &kp U          &kp I       &kp O      &kp P         &kp BKSP
+ &mt LCTRL ESC  &kp A      &kp S      &kp D       &kp F          &kp G          &kp H            &kp J          &kp K       &kp L      &kp SEMI      &kp QUOT
+ &kp LSHFT      &kp Z      &kp X      &kp C       &kp V          &kp B          &kp N            &kp M          &kp COMMA   &kp DOT    &kp FSLH      &lt MED_L RET
 #else
   &kp Q      &kp W      &kp F       &kp P          &kp B   &none &none  &kp J            &kp L          &kp U       &kp Y      &kp QUOT
   &kp A      &kp R      &kp S       &kp T          &kp G   &none &none  &kp M            &kp N          &kp E       &kp I      &kp O
@@ -81,7 +82,7 @@
 #ifdef TBLE_DUAL_2U
 &trans         &trans &trans    &mo NAV_L      &shifty      &kp SPACE        &mo NUM_L     &trans &trans &trans
 #elif defined(TBLE_MIT)
- &trans &trans         &kp LCTRL  &kp LGUI    &kp LALT          &lt NAV_L SPACE                   &mo NUM_L       &kp RALT &kp RCTRL        &trans &trans
+ &kp HYP(4) &kp LCTRL  &kp LALT  &kp LGUI  &lt NAV_L KP_MINUS    &kp SPACE    &lt NUM_L KP_PLUS  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT
 #else
  &trans &trans         &kp LCTRL  &kp LALT    &mo NAV_L      &shifty      &kp SPACE        &mo NUM_L      &kp RALT    &kp RCTRL          &trans &trans
 #endif
