@@ -18,7 +18,7 @@
 
 #define NAV_L 1
 #define NUM_L 2
-#define MED_L 3
+#define SYM_L 3
 #define FUN_L 4
 
 // Using layer taps on thumbs, having quick tap as well helps w/ repeating space/backspace
@@ -61,7 +61,7 @@
         compatible = "zmk,conditional-layers";
 	tri {
 	    if-layers = <NUM_L NAV_L>;
-	    then-layer = <MED_L>;
+	    then-layer = <SYM_L>;
         };
     };
 
@@ -71,6 +71,7 @@
         base_layer {
             label = "Base";
             bindings = <
+//apparently this is "BASE"
 #ifdef QWERTY_BASE
  &kp TAB        &kp Q      &kp W      &kp E       &kp R          &kp T          &kp Y            &kp U          &kp I       &kp O      &kp P         &kp BKSP
  &mt LCTRL ESC  &kp A      &kp S      &kp D       &kp F          &kp G          &kp H            &kp J          &kp K       &kp L      &kp SEMI      &kp QUOT
@@ -90,6 +91,7 @@
             >;
         };
 
+//apparently this is "LOWER"
         nav_layer {
             label = "Nav";
             bindings = <
@@ -106,6 +108,7 @@
             >;
         };
 
+//apparently this is "RAISE"
         num_layer {
             label = "Num";
             bindings = <
