@@ -101,7 +101,7 @@
 #ifdef TBLE_DUAL_2U
 &trans  &trans        &trans     &trans              &trans                    &trans       &trans         &trans &trans &trans
 #elif defined(TBLE_MIT)
-&trans  &trans        &trans     &trans      &trans                &trans             &mo 3       &trans   &trans &trans &trans
+&trans  &trans        &trans     &trans      &trans                &trans             &trans       &trans   &trans &trans &trans
 #else
 &trans  &trans        &trans     &trans      &trans          &trans       &trans    &trans  &trans         &trans &trans &trans
 #endif
