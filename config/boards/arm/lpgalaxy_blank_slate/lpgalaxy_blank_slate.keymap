@@ -96,7 +96,7 @@
             label = "Nav";
             bindings = <
 &kp LS(GRAVE)  &kp EXCL  &kp AT   &kp HASH  &kp DOLLAR &kp PERCENT &kp CARET  &kp AMPERSAND &kp ASTERISK  &kp LPAR     &kp RPAR      &trans
-&kp DEL        &trans    &trans   &trans    &trans     &trans      &trans     &kp LG(LBKT)  &kp LG(RBKT)  &kp LS(LBKT) &kp LS(RBKT)  &kp LS(BACKSLASH)
+&trans         &trans    &trans   &trans    &trans     &trans      &trans     &trans    &trans   &trans    &trans     &trans    
 &kp CAPS       &kp LEFT  &kp DOWN &kp UP    $kp RIGHT  &trans      &trans     &trans        &trans        &trans        &trans        &trans
 #ifdef TBLE_DUAL_2U
 &trans  &trans        &trans     &trans              &trans                    &trans       &trans         &trans &trans &trans
