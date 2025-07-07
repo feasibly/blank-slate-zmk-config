@@ -11,8 +11,8 @@
 
 #define QWERTY_BASE 1
 
-#define TBLE_ORTHO   1
-// #define TBLE_MIT     1
+// #define TBLE_ORTHO   1
+#define TBLE_MIT     1
 // #define TBLE_DUAL_2U 1
 
 #define NAV_L 1
@@ -20,7 +20,7 @@
 #define SYM_L 3
 
 // Using layer taps on thumbs, having quick tap as well helps w/ repeating space/backspace
-&lt { quick_tap_ms = <200>; };
+&lt { quick_tap_ms = <125>; };
 
 #define BT(n) BT_SEL n
 
@@ -81,11 +81,11 @@
  &kp LSHFT  &kp Z      &kp X      &kp C       &kp D          &kp V          &kp K            &kp H          &kp COMMA   &kp DOT    &kp SEMI      &kp RET
 #endif
 #ifdef TBLE_DUAL_2U
- &kp LCTRL  &kp LGUI   &kp LALT   &mo NAV_L         &shifty                        &kp SPACE                &mo NUM_L   &kp LALT   &kp RGUI      &kp RSHIFT
+ &mo SYM_L  &kp LCTRL  &kp LALT   &mo NAV_L         &shifty                        &kp SPACE                &mo NUM_L   &kp LALT   &kp RGUI      &kp RSHIFT
 #elif defined(TBLE_MIT)
- &kp LCTRL  &mo SYM_L   &kp LGUI  &kp LALT    &mo NAV_L          &kp SPACE                   &mo NUM_L      &kp LEFT    &kp UP     &kp DOWN      &kp RIGHT
+ &mo SYM_L  &kp LCTRL  &kp LGUI  &kp LALT    &mo NAV_L          &kp SPACE                   &mo NUM_L      &kp LEFT    &kp UP     &kp DOWN      &kp RIGHT
 #else
- &kp LCTRL  &mo SYM_L   &kp LGUI  &kp LALT    &mo NAV_L      &kp SPACE      &kp RET          &mo NUM_L      &kp LEFT    &kp UP     &kp DOWN      &kp RIGHT
+ &mo SYM_L  &kp LCTRL  &kp LGUI  &kp LALT    &mo NAV_L      &kp SPACE      &kp RET          &mo NUM_L      &kp LEFT    &kp UP     &kp DOWN      &kp RIGHT
 #endif
             >;
         };
@@ -129,11 +129,11 @@
 &trans     &kp COLON  &kp DLLR   &kp PRCNT   &kp CARET    &kp PLUS     &trans     &trans    &trans       &trans       &trans     &trans
 &trans     &kp TILDE  &kp EXCL   &kp AT      &kp HASH     &kp PIPE     &trans     &trans    &trans       &trans       &trans     &trans
 #ifdef TBLE_DUAL_2U
-&trans &trans        &trans     &kp RPAR                &trans                    &trans       &trans         &trans &trans &trans
+&trans &trans        &trans     &kp RPAR                &trans                    &trans       &trans         &trans &trans &studio_unlock
 #elif defined(TBLE_MIT)
-&trans &trans        &trans     &kp RPAR        &trans                &trans             &trans      &trans   &trans &trans &trans
+&trans &trans        &trans     &kp RPAR        &trans                &trans             &trans      &trans   &trans &trans &studio_unlock
 #else
-&trans &trans        &trans     &kp RPAR        &trans          &trans       &trans    &trans  &trans         &trans &trans &trans
+&trans &trans        &trans     &kp RPAR        &trans          &trans       &trans    &trans  &trans         &trans &trans &studio_unlock
 #endif
             >;
         };
