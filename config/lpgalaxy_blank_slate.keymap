@@ -136,7 +136,7 @@
 &trans  &kp LC(LA(LG(DOWN))) &kp LC(LA(LS(LG(N1)))) &kp LC(LA(LS(LG(N9)))) &kp LC(LA(LS(LG(N2))))    &trans       &trans          &trans &trans &trans &trans &trans 
 &trans  &kp LC(LA(LG(UP)))   &kp LC(LA(LS(LG(N7)))) &kp LC(LA(LS(LG(GRAVE)))) &kp LC(LA(LS(LG(N8)))) &bt BT_SEL 3 &trans          &trans &trans &trans &trans &trans
 #ifdef TBLE_DUAL_2U
-&trans &trans        &trans     &kp RPAR                &trans                    &trans       &trans         &trans &trans &studio_unlock
+&trans &trans        &trans     &kp RPAR                &trans                    &trans       &trans         &trans &trans &bootloader
 #elif defined(TBLE_MIT)
 &bt BT_CLR &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans 
 #else
