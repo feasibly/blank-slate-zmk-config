@@ -75,7 +75,7 @@
 #ifdef TBLE_DUAL_2U
  &mo SETTINGS  &kp LCTRL  &kp LALT   &mo LOWER         &shifty                        &kp SPACE                &mo RAISE   &kp LALT   &kp RGUI      &kp RSHIFT
 #elif defined(TBLE_MIT)
- &kp HYPR_4  &kp LCTRL  &kp LALT  &kp LGUI  &lt LOWER KP_MINUS  &kp SPACE  &lt RAISE KP_PLUS  &kp LEFT    &kp DOWN     &kp UP      &kp RIGHT
+ &kp LC(LA(LS(LG(N4))))  &kp LCTRL  &kp LALT  &kp LGUI  &lt LOWER KP_MINUS  &kp SPACE  &lt RAISE KP_PLUS  &kp LEFT    &kp DOWN     &kp UP      &kp RIGHT
 #else
  &mo SETTINGS  &kp LCTRL  &kp LGUI  &kp LALT    &mo LOWER      &kp SPACE      &kp RET          &mo RAISE      &kp LEFT    &kp UP     &kp DOWN      &kp RIGHT
 #endif
