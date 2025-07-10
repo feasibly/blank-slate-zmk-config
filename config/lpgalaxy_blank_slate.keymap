@@ -71,72 +71,45 @@
         base_layer {
             label = "Base";
             bindings = <
-#ifdef QWERTY_BASE
- &kp ESC    &kp Q      &kp W      &kp E       &kp R          &kp T          &kp Y            &kp U          &kp I       &kp O      &kp P         &kp BKSP
- &kp TAB    &kp A      &kp S      &kp D       &kp F          &kp G          &kp H            &kp J          &kp K       &kp L      &kp SEMI      &kp QUOT
- &kp LSHFT  &kp Z      &kp X      &kp C       &kp V          &kp B          &kp N            &kp M          &kp COMMA   &kp DOT    &kp FSLH      &kp RET
-#else
- &kp ESC    &kp Q      &kp W      &kp F       &kp P          &kp B          &kp J            &kp L          &kp U       &kp Y      &kp QUOT      &kp BKSP
- &kp TAB    &kp A      &kp R      &kp S       &kp T          &kp G          &kp M            &kp N          &kp E       &kp I      &kp O         &kp QUOT
- &kp LSHFT  &kp Z      &kp X      &kp C       &kp D          &kp V          &kp K            &kp H          &kp COMMA   &kp DOT    &kp SEMI      &kp RET
-#endif
-#ifdef TBLE_DUAL_2U
- &mo SETTINGS  &kp LCTRL  &kp LALT   &mo LOWER         &shifty                        &kp SPACE                &mo RAISE   &kp LALT   &kp RGUI      &kp RSHIFT
-#elif defined(TBLE_MIT)
- &mo SETTINGS  &kp LCTRL  &kp LGUI  &kp LALT    &mo LOWER          &kp SPACE                   &mo RAISE      &kp LEFT    &kp UP     &kp DOWN      &kp RIGHT
-#else
- &mo SETTINGS  &kp LCTRL  &kp LGUI  &kp LALT    &mo LOWER      &kp SPACE      &kp RET          &mo RAISE      &kp LEFT    &kp UP     &kp DOWN      &kp RIGHT
-#endif
+&kp TAB      &kp Q      &kp W      &kp E      &kp R      &kp T      &kp Y      &kp U      &kp I      &kp O      &kp P      &kp BKSP
+&mt LCTRL ESC &kp A     &kp S      &kp D      &kp F      &kp G      &kp H      &kp J      &kp K      &kp L      &kp SEMI   &kp QUOT
+&kp LSHFT    &kp Z      &kp X      &kp C      &kp V      &kp B      &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH   &lt SETTINGS ENTER
+&hypr N4     &kp RCTRL  &kp LALT   &kp LGUI   &lt LOWER KP_MINUS &kp SPACE &kp SPACE &lt RAISE KP_PLUS &kp LEFT &kp DOWN &kp UP &kp RIGHT
+&kp PSCRN    &kp LGUI   &none      &kp LALT   &tog LOWER  &none      &none      &lt RAISE SPACE &kp LBKT &none &kp RBKT &kp CAPSLOCK
             >;
         };
 
         lower_layer {
             label = "Lower";
             bindings = <
-&bt BT_CLR &trans     &trans     &trans      &trans          &trans       &trans     &trans         &trans      &trans     &trans     &kp DEL
-&trans     &trans     &trans     &trans      &trans          &trans       &trans     &kp LEFT       &kp DOWN    &kp UP     &kp RIGHT  &trans
-&trans     &bt BT(0)  &bt BT(1)  &bt BT(2)   &bt BT(3)       &bt BT(4)    &trans     &kp HOME       &kp PG_DN   &kp PG_UP  &kp END    &trans
-#ifdef TBLE_DUAL_2U
-&trans  &trans        &trans     &trans              &trans                    &trans       &trans         &trans &trans &trans
-#elif defined(TBLE_MIT)
-&trans  &trans        &trans     &trans      &trans                &trans             &trans      &trans   &trans &trans &trans
-#else
-&trans  &trans        &trans     &trans      &trans          &trans       &trans    &trans  &trans         &trans &trans &trans
-#endif
+&lsft GRAVE  &lsft 1    &lsft 2    &lsft 3    &lsft 4    &lsft 5    &lsft 6    &lsft 7    &lsft 8    &lsft 9    &lsft 0    &trans
+&kp DEL      &trans     &trans     &trans     &trans     &trans     &trans     &lgui LBKT  &lgui RBKT &lsft LBKT &lsft RBKT &lsft BSLH
+&trans       &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &trans     &trans     &kp MINUS   &kp EQUAL  &kp LBKT   &kp RBKT   &trans
+&trans       &trans     &trans     &trans     &trans     &trans     &trans     &mo SETTINGS &trans     &trans     &trans     &trans
+&kp ESC      &lca DEL   &none      &c_s ESC   &trans     &none      &none      &trans      &kp NU_BSLH &none     &kp GRAVE  &trans
             >;
         };
 
         raise_layer {
             label = "Raise";
             bindings = <
-&trans     &kp LBKT   &trans &trans &trans    &kp RBKT    &kp C_PREV    &kp N7     &kp N8      &kp N9       &trans     &trans
-&trans     &kp MINUS  &trans &trans &trans    &kp EQUAL   &kp C_NEXT    &kp N4     &kp N5      &kp N6       &trans     &trans
-&trans     &kp GRAVE  &trans &trans &trans    &kp BSLH    &trans        &kp N1     &kp N2      &kp N3       &trans     &trans
-#ifdef TBLE_DUAL_2U
-&trans  &trans       &trans     &kp N0              &trans                 &trans            &trans         &trans &trans &trans
-#elif defined(TBLE_MIT)
-&trans  &trans       &trans     &kp N0      &trans           &none            &trans        &kp DEL      &trans &trans &trans
-#else
-&trans  &trans       &trans     &kp N0      &trans    &none         &none     &kp ESC        &kp DEL      &trans &trans &trans
-#endif
+&kp GRAVE    &kp 1      &kp 2      &kp 3      &kp 4      &kp 5      &kp 6      &kp 7      &kp 8      &kp 9      &kp 0      &trans
+&trans       &trans     &trans     &trans     &trans     &trans     &trans     &kp MINUS   &kp EQUAL  &kp LBKT   &kp RBKT   &kp BSLH
+&trans       &kp LSHFT  &kp LCTRL  &kp LALT   &kp LGUI   &trans     &trans     &kp LEFT    &kp DOWN   &kp UP     &kp RIGHT  &trans
+&trans       &trans     &trans     &trans     &mo SETTINGS &trans   &trans     &trans      &kp MPLY   &kp VOLD   &kp MUTE   &kp VOLU
+&reset       &trans     &none      &trans     &trans     &none      &none      &trans      &trans     &none      &trans     &trans
             >;
         };
 
         settings_layer {
             label = "Settings";
             bindings = <
-&trans     &kp LBRC   &kp AMPS   &kp STAR    &kp LPAR     &kp RBRC     &trans     &trans    &trans       &trans       &trans     &bootloader
-&trans     &kp COLON  &kp DLLR   &kp PRCNT   &kp CARET    &kp PLUS     &trans     &trans    &trans       &trans       &trans     &trans
-&trans     &kp TILDE  &kp EXCL   &kp AT      &kp HASH     &kp PIPE     &trans     &trans    &trans       &trans       &trans     &trans
-#ifdef TBLE_DUAL_2U
-&trans &trans        &trans     &kp RPAR                &trans                    &trans       &trans         &trans &trans &studio_unlock
-#elif defined(TBLE_MIT)
-&trans &trans        &trans     &kp RPAR        &trans                &trans             &trans      &trans   &trans &trans &studio_unlock
-#else
-&trans &trans        &trans     &kp RPAR        &trans          &trans       &trans    &trans  &trans         &trans &trans &studio_unlock
-#endif
+&trans       &reset     &hypr N5   &hypr N3   &hypr N6   &trans     &trans     &trans      &kp WH_L   &kp BTN3   &kp WH_R  &lalt BKSP
+&lalt DEL    &lcag DOWN &hypr N1   &hypr N9   &hypr N2   &trans     &trans     &kp WH_U    &kp BTN1   &kp MS_U   &kp BTN2  &trans
+&trans       &lcag UP   &hypr N7   &hypr GRAVE &hypr N8  &trans     &trans     &kp WH_D    &kp MS_L   &kp MS_D   &kp MS_R  &trans
+&lcag C      &trans     &trans     &trans     &kp WH_D   &trans     &trans     &kp WH_U    &kp ACL0   &kp ACL1   &kp ACL2  &trans
+&lalt GRAVE  &lsa B     &none      &sgui F    &0xc0b     &none      &none      &rsft N     &ralt P    &none      &rgui T   &0x1a19
             >;
         };
-
     };
 };
