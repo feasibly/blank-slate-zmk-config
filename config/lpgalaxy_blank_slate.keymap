@@ -85,7 +85,7 @@
             label = "Base";
             bindings = <
  &kp TAB    &kp Q      &kp W      &kp E       &kp R          &kp T          &kp Y            &kp U          &kp I       &kp O      &kp P         &kp BKSP
- &mt LCTL ESC    &kp A      &kp S      &kp D       &kp F          &kp G          &kp H            &kp J          &kp K       &kp L      &kp SEMI      &kp QUOT
+ &mt LCTL ESC  &kp A   &kp S      &kp D       &kp F          &kp G          &kp H            &kp J          &kp K       &kp L      &kp SEMI      &kp QUOT
  &kp LSHFT  &kp Z      &kp X      &kp C       &kp V          &kp B          &kp N            &kp M          &kp COMMA   &kp DOT    &kp FSLH      &kp RET
 #ifdef TBLE_DUAL_2U
  &mo SETTINGS  &kp LCTRL  &kp LALT   &mo LOWER         &shifty                        &kp SPACE                &mo RAISE   &kp LALT   &kp RGUI      &kp RSHIFT
@@ -100,7 +100,7 @@
         lower_layer {
             label = "Lower";
             bindings = <
-&bt BT_CLR &trans     &trans     &trans      &trans          &trans       &trans     &trans         &trans      &trans     &trans     &kp DEL
+&kp TILDE  &kp EXCL   &kp AT     &kp HASH    &kp DLLR        &kp PRCNT    &kp CARET  &kp AMPS       &kp STAR    &kp LPAR   &kp RPAR   &trans
 &trans     &trans     &trans     &trans      &trans          &trans       &trans     &kp LEFT       &kp DOWN    &kp UP     &kp RIGHT  &trans
 &trans     &bt BT(0)  &bt BT(1)  &bt BT(2)   &bt BT(3)       &bt BT(4)    &trans     &kp HOME       &kp PG_DN   &kp PG_UP  &kp END    &trans
 #ifdef TBLE_DUAL_2U
@@ -116,7 +116,7 @@
         raise_layer {
             label = "Raise";
             bindings = <
-&trans     &kp LBKT   &trans &trans &trans    &kp RBKT    &kp C_PREV    &kp N7     &kp N8      &kp N9       &trans     &trans
+&kp GRAVE  &kp N1     &kp N2 &kp N3 &kp N4    &kp N5      &kp N6        &kp N7     &kp N8      &kp N9       &kp N0     &trans
 &trans     &kp MINUS  &trans &trans &trans    &kp EQUAL   &kp C_NEXT    &kp N4     &kp N5      &kp N6       &trans     &trans
 &trans     &kp GRAVE  &trans &trans &trans    &kp BSLH    &trans        &kp N1     &kp N2      &kp N3       &trans     &trans
 #ifdef TBLE_DUAL_2U
