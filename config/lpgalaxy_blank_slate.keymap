@@ -24,6 +24,17 @@
     };
 };
 
+/ {
+    behaviors {
+        tap_preferred_lt: behavior_tap_preferred_lt {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <125>;
+        };
+    };
+};
+
 // #define TBLE_ORTHO   1
 #define TBLE_MIT     1
 // #define TBLE_DUAL_2U 1
@@ -86,7 +97,7 @@
             bindings = <
  &kp TAB    &kp Q      &kp W      &kp E       &kp R          &kp T          &kp Y            &kp U          &kp I       &kp O      &kp P         &kp BKSP
  &mt LCTL ESC  &kp A   &kp S      &kp D       &kp F          &kp G          &kp H            &kp J          &kp K       &kp L      &kp SEMI      &kp QUOT
- &kp LSHFT  &kp Z      &kp X      &kp C       &kp V          &kp B          &kp N            &kp M          &kp COMMA   &kp DOT    &kp FSLH      &lt SETTINGS RET
+ &kp LSHFT  &kp Z      &kp X      &kp C       &kp V          &kp B          &kp N            &kp M          &kp COMMA   &kp DOT    &kp FSLH      &tap_preferred_lt SETTINGS RET
 #ifdef TBLE_DUAL_2U
  &mo SETTINGS  &kp LCTRL  &kp LALT   &mo LOWER         &shifty                        &kp SPACE                &mo RAISE   &kp LALT   &kp RGUI      &kp RSHIFT
 #elif defined(TBLE_MIT)
